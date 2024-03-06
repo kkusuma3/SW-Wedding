@@ -1,4 +1,3 @@
-import { MadeByLogoSrc } from "@/app/shared/imgSrc";
 import Container from "../Container";
 import Image from "next/image";
 

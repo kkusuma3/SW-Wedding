@@ -2,7 +2,6 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { Sheets } from '../../shared/types/sheets';
 import jwt from './jwt';
-import { FormValues } from '@/app/components/Pages/RSVPForm/types';
 
 // Config variables
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID || '';
