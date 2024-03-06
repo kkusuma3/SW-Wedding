@@ -10,6 +10,7 @@ const WISHES_SHEET_ID = parseInt(process.env.WISHES_SHEET_ID || '');
 
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID, jwt);
 
+//@ts-ignore
 export const appendSpreadsheet = async (row, sheetName: Sheets) => {
     try {
         await doc.loadInfo();
