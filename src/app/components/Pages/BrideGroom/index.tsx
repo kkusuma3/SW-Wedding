@@ -1,0 +1,51 @@
+import AOS from 'aos';
+import { useEffect } from "react";
+import Container from '../../Container';
+import LogoHeading from '../../LogoHeading';
+import Image from 'next/image';
+import BrideGroomCard from '../../BrideGroomCard';
+import { PersonProfileType } from '@/app/shared/types/profile';
+import { IconLogoSW, ImgBrideSrc, ImgGroomSrc } from '@/app/shared/imgSrc';
+
+const GROOM_PROFILE: PersonProfileType = {
+    name: "Sebastian Suwisar",
+    status: "First son of:",
+    parents: "Mr. Leonardi Suwisar & Mrs. Felia Srinaga",
+    image: {
+        src: ImgGroomSrc,
+        alt: "Picture of Groom: Sebastian Suwisar"
+    }
+}
+
+const BRIDE_PROFILE: PersonProfileType = {
+    name: "Widyana",
+    status: "Youngest daughter of:",
+    parents: "Mr. Atmaja Gusti & Mrs. Ratna Suhanna",
+    image: {
+        src: ImgBrideSrc,
+        alt: "Picture of Bride: Widyana"
+    }
+}
+
+const BrideGroom = () => {
+
+    return (
+        <Container>
+            <div id="bride-groom">
+                <div className="flex flex-col w-full py-10">
+                    <Image src={IconLogoSW}  alt="Logo of SW Wedding" width={100} height={100} className="w-1/4 md:w-1/12 mx-auto pb-6 md:pb-10"/>
+                    <span className="text-xl md:text-3xl mx-auto py-4">{`"We love because He first loved us."`}</span>
+                    <hr className="w-1/4 md:w-1/12 mx-auto border-1/2 border-primary"/>
+                    <span className="text-xl md:text-3xl mx-auto py-4">1 John 4:19</span>
+                </div>
+                <LogoHeading heading="Bride & Groom" />
+                <div className="flex flex-row flex-wrap justify-center">
+                    <BrideGroomCard userProfile={GROOM_PROFILE} />
+                    <BrideGroomCard userProfile={BRIDE_PROFILE} />
+                </div>
+            </div>
+        </Container>
+    )
+};
+
+export default BrideGroom;

@@ -1,0 +1,21 @@
+.background {
+    background: url(https://aawedding.mo.cloudinary.net/sw/img_bg_cover.webp) no-repeat center 75% scroll; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    color: #764E4C;
+}
+
+@media (max-width: 768px) {
+    .background {
+        background: url(https://aawedding.mo.cloudinary.net/sw/img_bg_cover.webp) no-repeat top scroll; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100vh;
+        color: #764E4C;
+    }
+}
