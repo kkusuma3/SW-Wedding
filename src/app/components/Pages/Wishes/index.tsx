@@ -7,7 +7,7 @@ import Container from "../../Container";
 import WishesList from "../../WishesList";
 import { FormValues } from './types';
 import LogoHeading from '../../LogoHeading';
-import { IconVerticalLine } from '@/app/shared/imgSrc';
+import { IconVerticalLine } from '@/app/shared/staticImportsSrc';
 
 const formInitialValues = {
     name:'',

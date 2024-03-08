@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { IconLogoHeading } from "@/app/shared/imgSrc";
+import { IconLogoHeading } from "@/app/shared/staticImportsSrc";
 
 interface LogoHeadingProps {
     heading?: string;
@@ -14,7 +14,7 @@ const NONHEADING_CLASSNAME = LOGO_HEADING_INITIAL_CLASSNAME + " py-10 lg:py-16";
 const LogoHeading = ({ heading, minPadding }: LogoHeadingProps) => (
     <div className={ minPadding ? LOGO_HEADING_INITIAL_CLASSNAME : heading ? HEADING_CLASSNAME : NONHEADING_CLASSNAME}>
         <Image src={IconLogoHeading} alt="Ribon Logo" width={400} height={100} />
-        { heading && <span className="text-4xl md:text-6xl text-center py-6">{heading}</span> }
+        { heading && <span className="text-5xl md:text-6xl text-center py-4 md:py-6">{heading}</span> }
     </div>
 
 );

@@ -6,6 +6,7 @@ import Wishes from "./components/Pages/Wishes";
 import WeddingGifts from "./components/Pages/WeddingGifts";
 import Footer from "./components/Pages/Footer";
 import PictureGallery from "./components/Pages/PictureGallery";
+import MusicPlayer from "./components/MusicPlayer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Wishes />
         <WeddingGifts />
         <Footer />
+        <MusicPlayer />
     </main>
   );
 }

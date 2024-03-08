@@ -2,8 +2,8 @@ const cloudinaryDomain = 'https://aawedding.mo.cloudinary.net/sw/';
 const iconsFolder = cloudinaryDomain + 'icons/';
 const galleryFolder = cloudinaryDomain + 'gallery/';
 
-export const ImgGroomSrc = cloudinaryDomain + 'img_groom.webp';
-export const ImgBrideSrc = cloudinaryDomain + 'img_bride.webp';
+export const ImgGroomSrc = cloudinaryDomain + 'img_groom_frame.webp';
+export const ImgBrideSrc = cloudinaryDomain + 'img_bride_frame.webp';
 export const BGLandingSrc = cloudinaryDomain + 'BGLanding.webp';
 export const CoverDesktopSrc = cloudinaryDomain + 'img_bg_cover.webp';
 export const CoverMobileSrc = cloudinaryDomain + 'cover_mobile.webp';
@@ -25,3 +25,7 @@ export const IconLogoHeading = iconsFolder + 'icon_logo_heading.svg';
 export const IconVerticalLine = iconsFolder + 'icon_vertical_line.svg';
 export const IconLogoSW = iconsFolder + 'logo_sw.webp';
 export const IconLogoBCA = iconsFolder + 'logo_bca.webp';
+
+
+// Music
+export const MusicSrc = cloudinaryDomain + 'music/sunrise.mp3';

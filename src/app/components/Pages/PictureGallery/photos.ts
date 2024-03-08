@@ -1,4 +1,4 @@
-import { GalleryPic10Src, GalleryPic11Src, GalleryPic12Src, GalleryPic1Src, GalleryPic2Src, GalleryPic3Src, GalleryPic4Src, GalleryPic5Src, GalleryPic6Src, GalleryPic7Src, GalleryPic8Src, GalleryPic9Src } from "@/app/shared/imgSrc";
+import { GalleryPic10Src, GalleryPic11Src, GalleryPic12Src, GalleryPic1Src, GalleryPic2Src, GalleryPic3Src, GalleryPic4Src, GalleryPic5Src, GalleryPic6Src, GalleryPic7Src, GalleryPic8Src, GalleryPic9Src } from "@/app/shared/staticImportsSrc";
 import { Image } from "react-grid-gallery";
 
 export interface CustomImage extends Image {

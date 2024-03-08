@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Container from "../../Container";
 import LogoHeading from '../../LogoHeading';
 import Image from 'next/image';
-import { IconVerticalLine } from '@/app/shared/imgSrc';
+import { IconVerticalLine } from '@/app/shared/staticImportsSrc';
 
 const GMAPS_DIRECTIONS_URL = "https://maps.app.goo.gl/TBb8t85ufL3WP6Et7";
 

@@ -1,12 +1,14 @@
 "use client"
+import Image from 'next/image';
 import { toast } from 'react-toastify';
-import { Formik, Form, Field, FormikHelpers } from 'formik';
+import { Formik, Form, Field, FormikHelpers, useFormikContext } from 'formik';
 import { appendSpreadsheet } from '../../../pages/api/sheets';
 import { Sheets } from '../../../shared/types/sheets';
 import { FormValues } from './types';
 import { RSVPSchema } from './validation.schema';
 import LogoHeading from '../../LogoHeading';
 import Container from '../../Container';
+import { IconVerticalLine } from '@/app/shared/staticImportsSrc';
 
 const formInitialValues: FormValues = {
     name: "",
@@ -19,21 +21,20 @@ const formInitialValues: FormValues = {
 
 const sheetSubmissionRow = formInitialValues;
 
-const RSVPForm = () => {
+const onSubmitClick = () => {
+    toast.success("Thank you for submitting your response!", {
+        position: "bottom-center"
+    })
+}
 
-    const onSubmitClick = () => {
-        console.log('success')
-        toast.success("Thank you for submitting your response!", {
-            position: "bottom-center"
-        })
-    }
+const onErrorNotification = () => {
+    toast.error("Please check your response format and re-submit.", {
+        position: "bottom-center"
+    })
+}
 
-    const onErrorNotification = () => {
-        toast.error("Please check your response format and re-submit.", {
-            position: "bottom-center"
-        })
-    }
-
+const RSVPForm = () => { 
+    
     return (
         <div id="rsvp">
             <Container>
@@ -57,12 +58,12 @@ const RSVPForm = () => {
                         setSubmitting(false);
                     }}
                 >  
-                    {({ errors, isSubmitting }) => (
+                    {({ values, errors, isSubmitting }) => (
                         <Form className="flex flex-col justify-evenly md:w-2/3 mx-auto">
                             <LogoHeading heading="Reservation" />
-                            <span className="text-lg lg:text-xl py-4 lg:py-8 w-full md:w-10/12 mx-auto text-center">Please kindly help us prepare everything better by confirming your attendance to both the Holy Matrimony and Wedding Reception with the following RSVP form:</span>
-                            <div className="flex flex-col justify-evenly pt-5 md:pt-10">
-                                <div className="flex flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-4 py-4">
+                            <span className="text-lg lg:text-xl md:py-4 w-full md:w-10/12 mx-auto text-center">Please kindly help us prepare everything better by confirming your attendance to both the Holy Matrimony and Wedding Reception with the following RSVP form:</span>
+                            <div className="flex flex-col justify-evenly py-5 md:py-10">
+                                <div className="flex flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-16 py-4">
                                     <div className="flex flex-col space-y-2 w-full md:w-5/12">
                                         <span className="text-lg lg:text-xl">Name: *</span>
                                         <Field type="name" name="name" placeholder="Name*" className="p-3 md:p-5 w-full rounded-md"/>
@@ -72,7 +73,7 @@ const RSVPForm = () => {
                                         <Field type="phoneNumber" name="phone_number" placeholder="WhatsApp Number" className="p-3 md:p-5 w-full rounded-md"/>
                                     </div>
                                 </div>
-                                <div className="flex flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-4 py-4">
+                                <div className="flex flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-8 py-4">
                                     <div className="flex flex-col space-y-4 w-full md:w-5/12 md:space-y-2 items-start">
                                         <span className="text-xl lg:text-2xl font-bold pb-2 lg:pb-4">Holy Matrimony</span>
                                         <span className="text-lg lg:text-xl">Will you attend the Holy Matrimony? *</span>
@@ -87,12 +88,13 @@ const RSVPForm = () => {
                                             </label>
                                         </div>
                                         <span className="text-lg lg:text-xl">Number of Guests: *</span>
-                                        <Field as="select" name="holy_matrimony_guests_count" className="p-3 md:p-5 w-full rounded-md">
-                                            <option value="" disabled selected>{`Number of Guest(s)*`}</option>
+                                        <Field as="select" name="holy_matrimony_guests_count" className="p-3 md:p-5 w-full rounded-md" disabled={values.holy_matrimony_attendance !== "Yes"}>
+                                            <option value="" selected>{`Number of Guest(s)*`}</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                         </Field>
                                     </div>
+                                    <Image className="hidden md:block" src={IconVerticalLine} alt="Vertical Line" width={1} height={100}/>
                                     <hr className="md:hidden w-full mx-auto border-1/2 border-primary"/>
                                     <div className="flex flex-col space-y-4 w-full md:w-5/12 md:space-y-2 items-start">
                                         <span className="text-xl lg:text-2xl font-bold pb-2 lg:pb-4">Wedding Reception</span>
@@ -108,8 +110,8 @@ const RSVPForm = () => {
                                             </label>
                                         </div>
                                         <span className="text-lg lg:text-xl">Number of Guests: *</span>
-                                        <Field as="select" name="reception_guests_count" className="p-3 md:p-5 w-full rounded-md">
-                                            <option value="" disabled selected>{`Number of Guest(s)*`}</option>
+                                        <Field as="select" name="reception_guests_count" className="p-3 md:p-5 w-full rounded-md"  disabled={values.reception_attendance !== "Yes"}>
+                                            <option value="" selected>{`Number of Guest(s)*`}</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                         </Field>

@@ -5,7 +5,7 @@ import LogoHeading from '../../LogoHeading';
 import Image from 'next/image';
 import BrideGroomCard from '../../BrideGroomCard';
 import { PersonProfileType } from '@/app/shared/types/profile';
-import { IconLogoSW, ImgBrideSrc, ImgGroomSrc } from '@/app/shared/imgSrc';
+import { IconLogoSW, ImgBrideSrc, ImgGroomSrc } from '@/app/shared/staticImportsSrc';
 
 const GROOM_PROFILE: PersonProfileType = {
     name: "Sebastian Suwisar",
@@ -39,7 +39,7 @@ const BrideGroom = () => {
                     <span className="text-xl md:text-3xl mx-auto py-4">1 John 4:19</span>
                 </div>
                 <LogoHeading heading="Bride & Groom" />
-                <div className="flex flex-row flex-wrap justify-center">
+                <div className="flex flex-row flex-wrap justify-evenly space-y-10 md:space-y-0 my-6 md:my-12">
                     <BrideGroomCard userProfile={GROOM_PROFILE} />
                     <BrideGroomCard userProfile={BRIDE_PROFILE} />
                 </div>
