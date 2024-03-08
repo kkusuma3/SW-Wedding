@@ -31,11 +31,11 @@ const BrideGroom = () => {
 
     return (
         <Container>
-            <div id="bride-groom">
-                <div className="flex flex-col w-full py-10">
+            <section id="bride-groom">
+                <div className="flex flex-col w-full py-2 md:py-5">
                     <Image src={IconLogoSW}  alt="Logo of SW Wedding" width={100} height={100} className="w-1/4 md:w-1/12 mx-auto pb-6 md:pb-10"/>
                     <span className="text-xl md:text-3xl mx-auto py-4">{`"We love because He first loved us."`}</span>
-                    <hr className="w-1/4 md:w-1/12 mx-auto border-1/2 border-primary"/>
+                    <hr className="w-1/6 md:w-1/12 lg:w-20 mx-auto border-1/2 border-primary"/>
                     <span className="text-xl md:text-3xl mx-auto py-4">1 John 4:19</span>
                 </div>
                 <LogoHeading heading="Bride & Groom" />
@@ -43,7 +43,7 @@ const BrideGroom = () => {
                     <BrideGroomCard userProfile={GROOM_PROFILE} />
                     <BrideGroomCard userProfile={BRIDE_PROFILE} />
                 </div>
-            </div>
+            </section>
         </Container>
     )
 };

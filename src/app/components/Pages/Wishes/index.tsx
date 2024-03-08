@@ -40,11 +40,11 @@ const Wishes = () => (
             }}
         >  
             {({ isSubmitting }) => (
-                <div id="wishes">
+                <section id="wishes">
                     <Form>
                         <Container>
                             <LogoHeading />
-                            <div className="flex flex-row flex-wrap justify-evenly space-x-4">
+                            <div className="flex flex-row flex-wrap justify-evenly space-x-1">
                                 <div className="flex flex-col justify-evenly space-y-6 text-center w-full md:w-5/12">
                                     <h4 className="text-2xl md:text-4xl font-bold">Your Wishes</h4>
                                     <span className="text-md md:text-lg">Send your warmest wishes to the bride & groom</span>
@@ -65,7 +65,7 @@ const Wishes = () => (
                                     />
                                     <button
                                         disabled={isSubmitting}
-                                        className="m-2 rounded-3xl w-full mx-auto p-2 md:p-3 bg-primary text-white"
+                                        className="m-2 rounded-3xl w-full mx-auto p-2 md:p-3 bg-primary text-white hover:bg-white hover:text-primary border hover:border-primary"
                                     >
                                         Send
                                     </button>
@@ -77,7 +77,7 @@ const Wishes = () => (
                             </div>
                         </Container>
                     </Form>
-                </div>
+                </section>
             )}
         </Formik>
     </>

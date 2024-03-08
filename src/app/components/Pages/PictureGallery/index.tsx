@@ -25,7 +25,7 @@ export default function PictureGallery() {
 
     return (
         <Container>
-            <div id="gallery" className="flex flex-col pt-8 md:pt-20">
+            <section id="gallery" className="flex flex-col">
                 <LogoHeading heading="Gallery" />
                 <Gallery
                     images={images}
@@ -48,7 +48,7 @@ export default function PictureGallery() {
                         onMoveNextRequest={handleMoveNext}
                     />
                 )}
-            </div>
+            </section>
         </Container>
     );
 }

@@ -36,7 +36,7 @@ const onErrorNotification = () => {
 const RSVPForm = () => { 
     
     return (
-        <div id="rsvp">
+        <section id="rsvp">
             <Container>
                 <Formik
                     initialValues={formInitialValues}
@@ -60,13 +60,13 @@ const RSVPForm = () => {
                 >  
                     {({ values, errors, isSubmitting }) => (
                         <Form className="flex flex-col justify-evenly md:w-2/3 mx-auto">
-                            <LogoHeading heading="Reservation" />
+                            <LogoHeading heading="Reservation" minPadding/>
                             <span className="text-lg lg:text-xl md:py-4 w-full md:w-10/12 mx-auto text-center">Please kindly help us prepare everything better by confirming your attendance to both the Holy Matrimony and Wedding Reception with the following RSVP form:</span>
                             <div className="flex flex-col justify-evenly py-5 md:py-10">
                                 <div className="flex flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-16 py-4">
                                     <div className="flex flex-col space-y-2 w-full md:w-5/12">
                                         <span className="text-lg lg:text-xl">Name: *</span>
-                                        <Field type="name" name="name" placeholder="Name*" className="p-3 md:p-5 w-full rounded-md"/>
+                                        <Field type="name" name="name" placeholder="Name" className="p-3 md:p-5 w-full rounded-md"/>
                                     </div>
                                     <div className="flex flex-col space-y-2 w-full md:w-5/12">
                                         <span className="text-lg lg:text-xl">WhatsApp Number: *</span>
@@ -89,7 +89,7 @@ const RSVPForm = () => {
                                         </div>
                                         <span className="text-lg lg:text-xl">Number of Guests: *</span>
                                         <Field as="select" name="holy_matrimony_guests_count" className="p-3 md:p-5 w-full rounded-md" disabled={values.holy_matrimony_attendance !== "Yes"}>
-                                            <option value="" selected>{`Number of Guest(s)*`}</option>
+                                            <option value="" selected>{`Please Select`}</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                         </Field>
@@ -111,7 +111,7 @@ const RSVPForm = () => {
                                         </div>
                                         <span className="text-lg lg:text-xl">Number of Guests: *</span>
                                         <Field as="select" name="reception_guests_count" className="p-3 md:p-5 w-full rounded-md"  disabled={values.reception_attendance !== "Yes"}>
-                                            <option value="" selected>{`Number of Guest(s)*`}</option>
+                                            <option value="" selected>{`Please Select`}</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                         </Field>
@@ -120,7 +120,7 @@ const RSVPForm = () => {
                                 </div>
                             </div>
                             <button
-                                className="m-2 rounded-3xl w-full md:w-1/3 mx-auto p-2 md:p-3 text-white bg-primary"
+                                className="m-2 rounded-3xl w-full md:w-1/3 mx-auto p-2 md:p-3 text-white bg-primary hover:bg-white hover:text-primary border hover:border-primary"
                                 disabled={isSubmitting}
                                 onClick={JSON.stringify(errors) !== '{}' ? onErrorNotification : onSubmitClick}    
                             >
@@ -130,7 +130,7 @@ const RSVPForm = () => {
                     )}
                 </Formik>
             </Container>
-        </div>
+        </section>
     )
 };
 
