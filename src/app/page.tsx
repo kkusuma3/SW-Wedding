@@ -7,6 +7,8 @@ import WeddingGifts from "./components/Pages/WeddingGifts";
 import Footer from "./components/Pages/Footer";
 import PictureGallery from "./components/Pages/PictureGallery";
 import MusicPlayer from "./components/MusicPlayer";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
         <WeddingGifts />
         <Footer />
         <MusicPlayer />
+        <ToastContainer autoClose={5000} />
     </main>
   );
 }

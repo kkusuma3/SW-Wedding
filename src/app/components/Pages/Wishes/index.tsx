@@ -8,6 +8,7 @@ import WishesList from "../../WishesList";
 import { FormValues } from './types';
 import LogoHeading from '../../LogoHeading';
 import { IconVerticalLine } from '@/app/shared/staticImportsSrc';
+import { toast } from 'react-toastify';
 
 const formInitialValues = {
     name:'',
@@ -22,65 +23,70 @@ const sheetSubmissionRow = {
 const FormInputClass = "bg-white w-full p-3 rounded-md";
 const FormTextAreaClass = "bg-white h-32 md:h-40 p-5 resize-none rounded-md";
 
+const onSubmitClick = () => {
+    toast.success("Thank you for submitting your wish!", {
+        position: "bottom-center"
+    })
+}
+
 const Wishes = () => (
-    <>
-        <Formik
-            initialValues={formInitialValues}
-            onSubmit={(
-                values: FormValues,
-                { resetForm, setSubmitting }: FormikHelpers<FormValues>
-            ) => {
-                sheetSubmissionRow.Name = values.name;
-                sheetSubmissionRow.Wishes = values.wishes;
-                appendSpreadsheet(sheetSubmissionRow, Sheets.WISHES);
-                resetForm({
-                    values: formInitialValues
-                })
-                setSubmitting(false);
-            }}
-        >  
-            {({ isSubmitting }) => (
-                <section id="wishes">
-                    <Form>
-                        <Container>
-                            <LogoHeading />
-                            <div className="flex flex-row flex-wrap justify-evenly space-x-1">
-                                <div className="flex flex-col justify-evenly space-y-6 text-center w-full md:w-5/12">
-                                    <h4 className="text-2xl md:text-4xl font-bold">Your Wishes</h4>
-                                    <span className="text-md md:text-lg">Send your warmest wishes to the bride & groom</span>
-                                    <Field
-                                        type="name"
-                                        name="name"
-                                        id="wishes-name"
-                                        placeholder="Name"
-                                        className={FormInputClass}
-                                    />
-                                    <Field
-                                        component="textarea"
-                                        rows="4"
-                                        name="wishes"
-                                        id="wishes-message"
-                                        className={FormTextAreaClass }
-                                        placeholder="Write your message here"
-                                    />
-                                    <button
-                                        disabled={isSubmitting}
-                                        className="m-2 rounded-3xl w-full mx-auto p-2 md:p-3 bg-primary text-white hover:bg-white hover:text-primary border hover:border-primary"
-                                    >
-                                        Send
-                                    </button>
-                                </div>
-                                <Image className="hidden md:block" src={IconVerticalLine} alt="Vertical Line" width={1} height={100}/>
-                                <div className="w-full md:w-5/12 my-auto pt-10 md:pt-0">
-                                    <WishesList />
-                                </div>
+    <Formik
+        initialValues={formInitialValues}
+        onSubmit={(
+            values: FormValues,
+            { resetForm, setSubmitting }: FormikHelpers<FormValues>
+        ) => {
+            sheetSubmissionRow.Name = values.name;
+            sheetSubmissionRow.Wishes = values.wishes;
+            appendSpreadsheet(sheetSubmissionRow, Sheets.WISHES);
+            resetForm({
+                values: formInitialValues
+            })
+            setSubmitting(false);
+        }}
+    >  
+        {({ isSubmitting }) => (
+            <section id="wishes">
+                <Form>
+                    <Container>
+                        <LogoHeading />
+                        <div className="flex flex-row flex-wrap justify-evenly space-x-1">
+                            <div className="flex flex-col justify-evenly space-y-6 text-center w-full md:w-5/12">
+                                <h4 className="text-2xl md:text-4xl font-bold">Your Wishes</h4>
+                                <span className="text-md md:text-lg">Send your warmest wishes to the bride & groom</span>
+                                <Field
+                                    type="name"
+                                    name="name"
+                                    id="wishes-name"
+                                    placeholder="Name"
+                                    className={FormInputClass}
+                                />
+                                <Field
+                                    component="textarea"
+                                    rows="4"
+                                    name="wishes"
+                                    id="wishes-message"
+                                    className={FormTextAreaClass}
+                                    placeholder="Write your message here"
+                                />
+                                <button
+                                    disabled={isSubmitting}
+                                    className="m-2 rounded-3xl w-full mx-auto p-2 md:p-3 bg-primary text-white hover:bg-white hover:text-primary border hover:border-primary"
+                                    onClick={onSubmitClick}
+                                >
+                                    Send
+                                </button>
                             </div>
-                        </Container>
-                    </Form>
-                </section>
-            )}
-        </Formik>
-    </>
+                            <Image className="hidden md:block" src={IconVerticalLine} alt="Vertical Line" width={1} height={100}/>
+                            <div className="w-full md:w-5/12 my-auto pt-10 md:pt-0">
+                                <WishesList />
+                            </div>
+                        </div>
+                    </Container>
+                </Form>
+            </section>
+        )}
+    </Formik>
 );
 
 export default Wishes;

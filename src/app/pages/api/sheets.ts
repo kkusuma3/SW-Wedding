@@ -31,7 +31,7 @@ export const getWishes = async() => {
     try {
         await doc.loadInfo();
         const sheet = doc.sheetsById[WISHES_SHEET_ID];
-        const rows = await sheet.getRows({ limit: 10 });
+        const rows = await sheet.getRows();
         return rows;
     } catch (e) {
         console.error('Error: ', e);

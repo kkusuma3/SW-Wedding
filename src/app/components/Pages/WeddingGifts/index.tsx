@@ -5,10 +5,14 @@ import Container from "../../Container";
 import LogoHeading from "../../LogoHeading";
 import { IconLogoBCA } from "@/app/shared/staticImportsSrc";
 import styles from './styles.module.css';
+import { toast } from "react-toastify";
 
-const copyToClipboard = () => (
+const copyToClipboard = () => {
     navigator.clipboard.writeText("6450248752")
-);
+    toast.info("Copied to clipboard!", {
+        position: "bottom-center"
+    })
+};
 
 const WeddingGifts = () => (
     <Container isFullWidth additionalClasses={styles.background}>
