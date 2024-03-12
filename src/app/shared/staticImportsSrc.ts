@@ -28,4 +28,4 @@ export const IconLogoBCA = iconsFolder + 'logo_bca.webp';
 
 
 // Music
-export const MusicSrc = cloudinaryDomain + 'music/sunrise.mp3';
+export const MusicSrc = cloudinaryDomain + 'music/background_music_sunrise.mp3';

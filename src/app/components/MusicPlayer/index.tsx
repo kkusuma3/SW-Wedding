@@ -2,6 +2,7 @@
 import { MusicSrc } from '@/app/shared/staticImportsSrc';
 import { MdOutlinePlayCircleFilled, MdOutlinePauseCircleFilled } from "react-icons/md";
 import { useState, useRef } from 'react';
+import styles from './styles.module.css';
 
 const iconClassName = ""
 
@@ -22,7 +23,7 @@ const MusicPlayer = () => {
 
     return (        
         <figure className="fixed bottom-5 md:bottom-10 right-5 md:right-10 text-4xl text-secondary">
-            { isMusicPlaying ? <MdOutlinePauseCircleFilled className={iconClassName} onClick={pauseAudio} /> : <MdOutlinePlayCircleFilled className={iconClassName} onClick={startAudio} /> }
+            { isMusicPlaying ? <MdOutlinePauseCircleFilled className={styles.btn__music_player} onClick={pauseAudio} /> : <MdOutlinePlayCircleFilled className={styles.btn__music_player} onClick={startAudio} /> }
             <audio ref={audioRef} autoPlay src={MusicSrc}></audio>
         </figure>
     )
