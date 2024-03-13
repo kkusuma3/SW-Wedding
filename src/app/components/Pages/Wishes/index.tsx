@@ -46,8 +46,8 @@ const Wishes = () => (
         }}
     >  
         {({ isSubmitting }) => (
-            <section id="wishes">
-                <Form data-aos="flip-down">
+            <section id="wishes" data-aos="fade-down">
+                <Form>
                     <Container>
                         <LogoHeading />
                         <div className="flex flex-row flex-wrap justify-evenly space-x-1">

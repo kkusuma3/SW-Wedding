@@ -34,7 +34,7 @@ const Location = () => {
                     </div>
                     <div className="flex flex-col py-8 lg:py-12 items-center">
                         <span className="text-lg lg:text-3xl font-bold text-center">DoubleTree by Hilton Jakarta Kemayoran</span>
-                        <span className="text-md lg:text-xl">Jl. Griya Utama Blok B no. 1, Jakarta Utara</span>
+                        <span className="text-md lg:text-xl text-center">Jl. Griya Utama Blok B no. 1, Jakarta Utara</span>
                     </div>
                     <a className="mx-auto w-1/2 md:w-1/4" href={GMAPS_DIRECTIONS_URL} target="_blank" rel="noopener">
                         <button className="rounded-3xl w-full mx-auto p-2 md:p-3 text-primary border border-primary bg-white hover:text-white hover:bg-primary font-bold">
