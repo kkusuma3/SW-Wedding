@@ -7,6 +7,7 @@ import "react-18-image-lightbox/style.css";
 import { images, CustomImage } from "./photos";
 import Container from "../../Container";
 import LogoHeading from "../../LogoHeading";
+import styles from './styles.module.css';
 
 export default function PictureGallery() {
     const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 });
@@ -24,8 +25,8 @@ export default function PictureGallery() {
     const handleMoveNext = () => setIndex(nextIndex);
 
     return (
-        <Container>
-            <section id="gallery" className="flex flex-col">
+        <Container isFullWidth additionalClasses={styles.background}>
+            <section id="gallery" className="flex flex-col mx-auto w-10/12 py-5 md:py-14">
                 <LogoHeading heading="Gallery" />
                 <Gallery
                     images={images}

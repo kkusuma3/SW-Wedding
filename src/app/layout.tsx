@@ -29,6 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+        <head>
+            <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon/favicon-16x16.png" />
+            <link rel="shortcut icon" href="/icons/favicon/favicon.ico" />
+        </head>
         <body className={styles.bgLayout + ` ${philosopher.variable} ${italianno.variable} font-sans`}>
             <Header />
             {children}
