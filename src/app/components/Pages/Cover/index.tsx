@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 const CoverPage = () => (
     <div className={styles.background}>
-        <div className="flex flex-col w-full h-full md:w-3/4 m-auto text-center justify-between md:justify-between">
+        <div data-aos="fade-up" className="flex flex-col w-full h-full md:w-3/4 m-auto text-center justify-between md:justify-between">
             <div className="md:space-y-4">
                 <div className="flex flex-col justify-evenly w-11/12 md:w-full mx-auto pt-20 md:pt-26">
                     <Image src={IconLogoSW}  alt="Logo of SW Wedding" width={100} height={100} className="md:hidden w-1/4 md:w-1/12 mx-auto pb-6 md:pb-10"/>    

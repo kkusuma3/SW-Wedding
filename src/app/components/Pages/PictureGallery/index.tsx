@@ -27,7 +27,7 @@ export default function PictureGallery() {
     return (
         <Container isFullWidth additionalClasses={styles.background}>
             <section id="gallery" className="flex flex-col mx-auto w-10/12 py-5 md:py-14">
-                <LogoHeading heading="Gallery" />
+                <LogoHeading heading="Gallery" dataAos="flip-left"/>
                 <Gallery
                     images={images}
                     onClick={handleClick}

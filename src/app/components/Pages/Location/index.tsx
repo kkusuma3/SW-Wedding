@@ -17,10 +17,10 @@ const Location = () => {
     return (    
         <Container isFullWidth={false}>
             <section id="matrimony" className="py-5 md:py-10">
-                <div className="flex flex-col mx-auto w-10/12 items-center">
+                <div className="flex flex-col mx-auto w-10/12 items-center" data-aos="zoom-out-right">
                     <LogoHeading heading="Venue"/>
                     <span className="text-xl lg:text-3xl font-bold pb-8 lg:pb-12 mx-auto">Saturday, June 29th 2024</span>
-                    <div className="flex flex-row flex-wrap justify-evenly md:justify-center space-y-6 md:space-y-0 md:space-x-12" data-aos="zoom-out">
+                    <div className="flex flex-row flex-wrap justify-evenly md:justify-center space-y-6 md:space-y-0 md:space-x-12">
                         <div className="flex flex-col space-y-2 items-center md:items-end">
                             <span className="text-4xl lg:text-5xl italic font-italianno">Holy Matrimony</span>
                             <span className="text-xl lg:text-2xl font-light">10:00 WIB</span>

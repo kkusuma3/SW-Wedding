@@ -64,7 +64,7 @@ const RSVPForm = () => (
                 }}
             >  
                 {({ values, errors, isSubmitting }) => (
-                    <Form className="flex flex-col justify-evenly md:w-2/3 mx-auto">
+                    <Form className="flex flex-col justify-evenly md:w-2/3 mx-auto" data-aos="fade-down-left">
                         <LogoHeading heading="Reservation" minPadding/>
                         <span className="text-lg lg:text-xl md:py-4 w-full md:w-10/12 mx-auto text-center">Please kindly help us prepare everything better by confirming your attendance to both the Holy Matrimony and Wedding Reception with the following RSVP form:</span>
                         <div className="flex flex-col justify-evenly py-5 md:py-10">

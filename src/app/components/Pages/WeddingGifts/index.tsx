@@ -16,7 +16,7 @@ const copyToClipboard = () => {
 
 const WeddingGifts = () => (
     <Container isFullWidth additionalClasses={styles.background}>
-        <section id="gifts" className="flex flex-col text-center text-primary py-5 md:py-10 w-10/12 mx-auto">
+        <section id="gifts" className="flex flex-col text-center text-primary py-5 md:py-10 w-10/12 mx-auto" data-aos="fade-down">
             <LogoHeading heading="Wedding Gift" minPadding/>
             <span className="text-md md:text-lg w-full md:w-2/3 mx-auto mt-2 mb-10">We are incredibly grateful for your love and support as we celebrate our special day. If you wish to share in our joy with a gift, we would be honored. Please find the details below:</span>
             <div className="flex flex-row p-4 md:p-8 w-full md:w-1/3 mx-auto justify-around place-items-center bg-white rounded-xl">
