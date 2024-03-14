@@ -17,7 +17,7 @@ const Location = () => {
     return (    
         <Container isFullWidth={false}>
             <section id="matrimony" className="py-5 md:py-10">
-                <div className="flex flex-col mx-auto w-10/12 items-center" data-aos="zoom-out-right">
+                <div className="flex flex-col mx-auto w-10/12 items-center" data-aos="zoom-out">
                     <LogoHeading heading="Venue"/>
                     <span className="text-xl lg:text-3xl font-bold pb-8 lg:pb-12 mx-auto">Saturday, June 29th 2024</span>
                     <div className="flex flex-row flex-wrap justify-evenly md:justify-center space-y-6 md:space-y-0 md:space-x-12">

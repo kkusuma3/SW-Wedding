@@ -93,7 +93,13 @@ const RSVPForm = () => (
                                         </label>
                                     </div>
                                     <span className="text-lg lg:text-xl">Number of Guests: *</span>
-                                    <Field as="select" name="holy_matrimony_guests_count" className="p-3 md:p-5 w-full rounded-md" disabled={values.holy_matrimony_attendance !== "Yes"}>
+                                    <Field
+                                        as="select"
+                                        name="holy_matrimony_guests_count"
+                                        className="p-3 md:p-5 w-full rounded-md"
+                                        disabled={values.holy_matrimony_attendance !== "Yes"}
+                                        value={values.holy_matrimony_attendance === "No" ? "" : values.holy_matrimony_guests_count}
+                                    >
                                         <option value="" selected>{`Please Select`}</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -115,7 +121,14 @@ const RSVPForm = () => (
                                         </label>
                                     </div>
                                     <span className="text-lg lg:text-xl">Number of Guests: *</span>
-                                    <Field as="select" name="reception_guests_count" className="p-3 md:p-5 w-full rounded-md"  disabled={values.reception_attendance !== "Yes"}>
+                                    <Field
+                                        as="select"
+                                        name="reception_guests_count"
+                                        className="p-3 md:p-5 w-full rounded-md"
+                                        disabled={values.reception_attendance !== "Yes"}
+                                        value={values.reception_attendance === "No" ? "" : values.reception_guests_count}
+                                        style={{ border: 'blue'}}
+                                    >
                                         <option value="" selected>{`Please Select`}</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
