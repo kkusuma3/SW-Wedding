@@ -24,7 +24,7 @@ const WeddingGifts = () => (
                     <Image src={IconLogoBCA} alt="Logo for Bank BCA" className="w-20 mx-auto my-4" width={100} height={50}/>
                     <span className="text-xl md:text-2xl font-bold">a/n Sebastian Suwisar</span>
                     <div className="flex flex-row place-content-center items-center space-x-2">
-                        <span className="text-2xl md:text-3xl font-bold">6450248752</span>
+                        <span className="text-xl md:text-3xl font-bold">6450248752</span>
                         <button className="hover:bg-background rounded-full p-2" title="copy-clipboard-button" type="button" onClick={copyToClipboard}>
                             <FaRegCopy className="text-xl h-full cursor-pointer"/>
                         </button>

@@ -1,5 +1,8 @@
 .btn__music_player {
-    background-color: white;
+    padding: 5px;
+    background-color: #C07C5B;
+    color: white;
+    border: 2px white solid;
     box-shadow: 0 0 10px 10px #FFE2A9;
     border-radius: 65px;
     animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1)
