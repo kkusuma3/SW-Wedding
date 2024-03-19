@@ -34,6 +34,7 @@ export default function RootLayout({
                 name="description"
                 content={DEFAULT_SITE_DESCRIPTION}
             />
+            <title>The Wedding of Sebastian & Widyana</title>
             <meta
                 property="og:description"
                 content={DEFAULT_SITE_DESCRIPTION}
