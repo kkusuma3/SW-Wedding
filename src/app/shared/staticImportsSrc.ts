@@ -4,6 +4,7 @@ const galleryFolder = cloudinaryDomain + 'gallery/';
 
 export const ImgGroomSrc = cloudinaryDomain + 'img_groom_frame.webp';
 export const ImgBrideSrc = cloudinaryDomain + 'img_bride_frame.webp';
+export const ImgFooterSrc = cloudinaryDomain + 'img_icon_footer.webp';
 export const BGLandingSrc = cloudinaryDomain + 'BGLanding.webp';
 export const CoverDesktopSrc = cloudinaryDomain + 'img_bg_cover.webp';
 export const CoverMobileSrc = cloudinaryDomain + 'cover_mobile.webp';

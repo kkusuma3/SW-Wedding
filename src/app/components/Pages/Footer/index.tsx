@@ -1,21 +1,25 @@
 "use client"
-// import { useMediaQuery } from "react-responsive";
+import Image from 'next/image';
 import AOS from 'aos';
 import Container from "../../Container";
 import styles from './styles.module.css';
 import { useEffect } from "react";
+import { ImgFooterSrc } from '@/app/shared/staticImportsSrc';
 
 export const FooterContent = () => (
-    <div className="flex flex-col w-full md:w-2/3 mx-auto text-center text-primary py-20 px-5" data-aos="zoom-in-up">
-        <span className="text-lg md:text-2xl p-2">See you on our big day</span>
-        <span className="text-5xl md:text-8xl p-2 font-italianno">Sebastian & Widyana</span>
-        <span className="text-lg md:text-2xl p-2 font-bold">#insTIANtlyWIred</span>
+    <div className="flex flex-col w-full h-full md:w-2/3 mx-auto text-center text-primary py-20 px-5 justify-between" data-aos="zoom-in-up">
+        <div className="flex flex-col">
+            <span className="text-lg md:text-2xl p-2">See you on our big day</span>
+            <span className="text-5xl md:text-8xl p-2 font-italianno">Sebastian & Widyana</span>
+            <span className="text-lg md:text-2xl p-2 font-bold">#insTIANtlyWIred</span>
+        </div>
+        <div className="flex flex-row justify-center">
+            <Image className="w-1/4 md:w-1/6" src={ImgFooterSrc} alt="Made by Kevin & Stefamikha Logo" width={400} height={100} />
+        </div>
     </div>
 );
 
-const Footer = () => {
-    // const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 });
-    
+const Footer = () => {    
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -26,7 +30,8 @@ const Footer = () => {
     return (
         <Container isFullWidth>
             <div className={styles.background}>
-               <FooterContent />
+                <FooterContent />
+                
             </div>
         </Container>
     )
