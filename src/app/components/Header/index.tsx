@@ -28,8 +28,8 @@ const Header = () => {
             { (isScrolled || isMobileMenuClicked) && 
                 <Headroom>
                     <header>
-                        <nav className="p-0 md:p-5 mx-auto w-full md:w-3/4 uppercase font-philosopher bg-background">
-                            <div className="hidden md:flex md:justify-evenly md:content-center">
+                        <nav className="p-0 md:p-5 w-full uppercase font-philosopher bg-background">
+                            <div className="hidden md:flex md:justify-evenly md:content-center md:w-3/4 mx-auto">
                                 {
                                     NavLinks.map((link) => (
                                     <span key={link.id} className="cursor-pointer">
