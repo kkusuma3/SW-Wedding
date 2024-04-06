@@ -7,14 +7,16 @@ import { useEffect } from "react";
 import { ImgFooterSrc } from '@/app/shared/staticImportsSrc';
 
 export const FooterContent = () => (
-    <div className="flex flex-col w-full h-full md:w-2/3 mx-auto text-center text-primary py-20 px-5 justify-between" data-aos="zoom-in-up">
+    <div className="flex flex-col w-full h-full md:w-2/3 mx-auto text-center text-primary py-10 px-5 justify-between" data-aos="zoom-in-up">
         <div className="flex flex-col">
             <span className="text-lg md:text-2xl p-2">See you on our big day</span>
             <span className="text-5xl md:text-8xl p-2 font-italianno">Sebastian & Widyana</span>
             <span className="text-lg md:text-2xl p-2 font-bold">#insTIANtlyWIred</span>
         </div>
         <div className="flex flex-row justify-center">
-            <Image className="w-1/4 md:w-1/6" src={ImgFooterSrc} alt="Made by Kevin & Stefamikha Logo" width={400} height={100} />
+            <a className="w-1/4 md:w-1/6" href="https://www.instagram.com/milovinid" target="_blank" rel="noopener">
+                <Image src={ImgFooterSrc} alt="Made by Kevin & Stefamikha Logo" width={400} height={100} />
+            </a>
         </div>
     </div>
 );
