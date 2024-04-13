@@ -26,10 +26,5 @@ export const NavigationLinks = (): Array<NavigationLink> => (
             id: '4',
             name: "Wishes",
             href: "wishes",
-        },
-        {
-            id: '5',
-            name: "Gifts",
-            href: "gifts",
         }
     ])

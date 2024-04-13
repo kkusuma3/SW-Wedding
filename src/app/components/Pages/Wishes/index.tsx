@@ -9,6 +9,7 @@ import { FormValues } from './types';
 import LogoHeading from '../../LogoHeading';
 import { IconVerticalLine } from '@/app/shared/staticImportsSrc';
 import { toast } from 'react-toastify';
+import styles from './styles.module.css';
 
 const formInitialValues = {
     name:'',
@@ -46,7 +47,7 @@ const Wishes = () => (
         }}
     >  
         {({ isSubmitting }) => (
-            <section id="wishes" data-aos="fade-down">
+            <section id="wishes" data-aos="fade-down" className={styles.background}>
                 <Form>
                     <Container>
                         <LogoHeading />

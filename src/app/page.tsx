@@ -28,7 +28,6 @@ export default function Home() {
             <Location />
             <RSVPForm />
             <Wishes />
-            <WeddingGifts />
             <Footer />
             <MusicPlayer />
             <ToastContainer autoClose={5000} />
