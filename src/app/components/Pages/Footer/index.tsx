@@ -17,7 +17,7 @@ export const FooterContent = () => (
             <a className="w-1/4 md:w-1/6 mx-auto" href="https://www.instagram.com/milovinid" target="_blank" rel="noopener">
                 <Image src={ImgFooterSrc} alt="Made by Kevin & Stefamikha Logo" width={400} height={100} />
             </a>
-            <span className="text-xs md:text-sm text-white font-light p-1">Photos by @byantonius - kairosworks</span>
+            <span className={styles.font_footer}>Photos by @byantonius - kairosworks</span>
         </div>
     </div>
 );

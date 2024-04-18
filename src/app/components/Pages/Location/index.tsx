@@ -30,7 +30,7 @@ const Location = () => {
                         <hr className="md:hidden w-8/12 mx-auto border-1/2 border-primary"/>
                         <div className="flex flex-col space-y-2 items-center md:items-start">
                             <span className="text-4xl lg:text-5xl italic font-italianno">Wedding Reception</span>
-                            <span className="text-xl lg:text-2xl font-light">Angsana Room</span>
+                            <span className="text-xl lg:text-2xl font-light">Angsana Ballroom</span>
                             <span className="text-xl lg:text-2xl font-light">18:00 WIB</span>
                         </div>
                     </div>

@@ -1,3 +1,9 @@
+.font_footer {
+    font-size: 0.75rem;
+    color: white;
+    padding: 0.25rem;
+}
+
 .background {
     background: url(https://aawedding.mo.cloudinary.net/sw/img_bg_footer.webp) no-repeat top scroll; 
     -webkit-background-size: cover;
@@ -15,5 +21,9 @@
         -o-background-size: cover;
         background-size: cover;
         height: 110vh;
+    }
+
+    .font_footer {
+        font-size: 0.6rem;
     }
 }
