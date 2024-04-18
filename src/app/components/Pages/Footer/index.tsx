@@ -13,10 +13,11 @@ export const FooterContent = () => (
             <span className="text-5xl md:text-8xl p-2 font-italianno">Sebastian & Widyana</span>
             <span className="text-lg md:text-2xl p-2 font-bold">#insTIANtlyWIred</span>
         </div>
-        <div className="flex flex-row justify-center">
-            <a className="w-1/4 md:w-1/6" href="https://www.instagram.com/milovinid" target="_blank" rel="noopener">
+        <div className="flex flex-col w-full">
+            <a className="w-1/4 md:w-1/6 mx-auto" href="https://www.instagram.com/milovinid" target="_blank" rel="noopener">
                 <Image src={ImgFooterSrc} alt="Made by Kevin & Stefamikha Logo" width={400} height={100} />
             </a>
+            <span className="text-xs md:text-sm text-white font-light p-1">Photos by @byantonius - kairosworks</span>
         </div>
     </div>
 );

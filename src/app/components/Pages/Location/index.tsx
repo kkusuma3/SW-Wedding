@@ -23,12 +23,14 @@ const Location = () => {
                     <div className="flex flex-row flex-wrap justify-evenly md:justify-center space-y-6 md:space-y-0 md:space-x-12">
                         <div className="flex flex-col space-y-2 items-center md:items-end">
                             <span className="text-4xl lg:text-5xl italic font-italianno">Holy Matrimony</span>
+                            <span className="text-xl lg:text-2xl font-light">Cendana Room</span>
                             <span className="text-xl lg:text-2xl font-light">10:00 WIB</span>
                         </div>
                         <Image className="hidden md:block" src={IconVerticalLine} alt="Vertical Line" width={1} height={100}/>
                         <hr className="md:hidden w-8/12 mx-auto border-1/2 border-primary"/>
                         <div className="flex flex-col space-y-2 items-center md:items-start">
                             <span className="text-4xl lg:text-5xl italic font-italianno">Wedding Reception</span>
+                            <span className="text-xl lg:text-2xl font-light">Angsana Room</span>
                             <span className="text-xl lg:text-2xl font-light">18:00 WIB</span>
                         </div>
                     </div>
