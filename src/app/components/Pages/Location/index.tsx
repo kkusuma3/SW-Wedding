@@ -6,7 +6,7 @@ import LogoHeading from '../../LogoHeading';
 import Image from 'next/image';
 import { IconVerticalLine } from '@/app/shared/staticImportsSrc';
 
-const GMAPS_DIRECTIONS_URL = "https://maps.app.goo.gl/TBb8t85ufL3WP6Et7";
+const GMAPS_DIRECTIONS_URL = "https://maps.app.goo.gl/hMd4q35CtCzYAmBG6?g_st=ic";
 
 const Location = () => {
     
