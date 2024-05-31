@@ -2,8 +2,8 @@ const cloudinaryDomain = 'https://aawedding.mo.cloudinary.net/sw/';
 const iconsFolder = cloudinaryDomain + 'icons/';
 const galleryFolder = cloudinaryDomain + 'gallery/';
 
-export const ImgGroomSrc = cloudinaryDomain + 'img_groom_frame.webp';
-export const ImgBrideSrc = cloudinaryDomain + 'img_bride_frame.webp';
+export const ImgGroomSrc = cloudinaryDomain + 'img_groom_framed.webp';
+export const ImgBrideSrc = cloudinaryDomain + 'img_bride_framed.webp';
 export const ImgFooterSrc = cloudinaryDomain + 'img_icon_footer.webp';
 export const BGLandingSrc = cloudinaryDomain + 'BGLanding.webp';
 export const CoverDesktopSrc = cloudinaryDomain + 'img_bg_cover.webp';
